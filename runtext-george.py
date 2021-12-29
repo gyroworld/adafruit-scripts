@@ -19,10 +19,13 @@ font_file = "/home/pi/rpi-rgb-led-matrix/fonts/7x13.bdf"
 font = graphics.Font().LoadFont(font_file)
 
 #Set color
-textColor1 = graphics.Color(255, 0, 255)
+textColor = graphics.Color(255, 0, 255)
 
+#Drawing on screen
 offscreen_canvas = matrix.CreateFrameCanvas()
 offscreen_canvas.Clear()
+graphics.DrawText(offscreen_canvas, font, 32, 10, textColor, "Test")
+
 
 print('ran')
 time.sleep(5)
