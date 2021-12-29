@@ -1,11 +1,29 @@
 #!/usr/bin/python
-import sys
-sys.path.append('/home/pi/rpi-rgb-led-matrix/bindings/python/samples')
-from samplebase import SampleBase
-from rgbmatrix import graphics
+#import sys
+#sys.path.append('/home/pi/rpi-rgb-led-matrix/bindings/python/samples')
+#from samplebase import SampleBase
+from rgbmatrix import RGBMatrix, RGBMatrixOptions, graphics
 import time
 
+#Set matrix options
+options = RGBMatrixOptions()
+options.rows = 32
+options.chain_length = 1
+options.parallel = 1
+options.hardware_mapping = 'adafruit-hat'
+options.disable_hardware_pulsing = True
+matrix = RGBMatrix(options = options)
 
+#Set font
+font_file = "/home/pi/rpi-rgb-led-matrix/fonts/7x13.bdf"
+font = graphics.Font().LoadFont(font_file)
+
+#Set color
+textColor1 = graphics.Color(255, 0, 255)
+
+
+
+"""
 class RunText(SampleBase):
     def __init__(self, *args, **kwargs):
         super(RunText, self).__init__(*args, **kwargs)
@@ -35,3 +53,4 @@ if __name__ == "__main__":
     run_text = RunText()
     if (not run_text.process()):
         run_text.print_help()
+"""
