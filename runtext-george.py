@@ -25,7 +25,7 @@ textColor = graphics.Color(255, 0, 255)
 offscreen_canvas = matrix.CreateFrameCanvas()
 #offscreen_canvas.Clear()
 graphics.DrawText(offscreen_canvas, font, 32, 10, textColor, "Test")
-matrix.SwapOnVSync(offscreen_canvas)
+#matrix.SwapOnVSync(offscreen_canvas)
 
 print('ran')
 time.sleep(5)
