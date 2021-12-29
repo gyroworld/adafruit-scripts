@@ -1,5 +1,6 @@
-#!/usr/bin/env python
-# Display a runtext with double-buffering.
+#!/usr/bin/python
+import sys
+sys.path.append('/home/pi/rpi-rgb-led-matrix/bindings/python/samples')
 from samplebase import SampleBase
 from rgbmatrix import graphics
 import time
