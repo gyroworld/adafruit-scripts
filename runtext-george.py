@@ -21,6 +21,37 @@ font = graphics.Font().LoadFont(font_file)
 #Set color
 textColor1 = graphics.Color(255, 0, 255)
 
+# draw some text!
+matrix.setCursor(1, 0);   # start at top left, with one pixel of spacing
+matrix.setTextSize(1);    # size 1 == 8 pixels high
+
+# print each letter with a rainbow color
+matrix.setTextColor(matrix.Color333(7,0,0))
+matrix.print('1')
+matrix.setTextColor(matrix.Color333(7,4,0))
+matrix.print('6')
+matrix.setTextColor(matrix.Color333(7,7,0))
+matrix.print('x')
+matrix.setTextColor(matrix.Color333(4,7,0))
+matrix.print('3')
+matrix.setTextColor(matrix.Color333(0,7,0))
+matrix.print('2')
+
+matrix.setCursor(1, 9);   # next line
+matrix.setTextColor(matrix.Color333(0,7,7))
+matrix.print('*')
+matrix.setTextColor(matrix.Color333(0,4,7))
+matrix.print('R')
+matrix.setTextColor(matrix.Color333(0,0,7))
+matrix.print('G')
+matrix.setTextColor(matrix.Color333(4,0,7))
+matrix.print("B")
+matrix.setTextColor(matrix.Color333(7,0,4))
+matrix.print("*")
+
+print('ran')
+time.sleep(5)
+print('complete')
 
 
 """
