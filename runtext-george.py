@@ -66,7 +66,7 @@ def fontTest():
     print(font.height)
     print(font.baseline)
 
-def happyNewYear():
+def happyNewYearStatic():
     print("Running happyNewYear.")
     graphics.DrawText(matrix, font, 1, 8, green, "HAPPY")
     graphics.DrawText(matrix, font, 7, 16, red, "NEW")
@@ -76,4 +76,35 @@ def happyNewYear():
     print("happyNewYear complete.")
 
 
-happyNewYear()
+def happyNewYearScroll():
+    global offscreen_canvas
+    x1 = 32
+    x2 = 38
+    x3 = 42
+    x4 = 48
+
+    while True:
+        offscreen_canvas.Clear()
+        graphics.DrawText(matrix, font, x1 8, green, "HAPPY")
+        graphics.DrawText(matrix, font, x2, 16, red, "NEW")
+        graphics.DrawText(matrix, font, x3, 24, purple, "YEAR")
+        graphics.DrawText(matrix, font, x4, 32, blue, "2022")
+
+        x1 -= 1
+        x2 -= 1
+        x3 -= 1
+        x4 -= 1
+
+        if (x1 == 0):
+            x1 = 32
+        if (x2 == 0):
+            x2 = 38
+        if (x3 == 0):
+            x3 = 42
+        if (x4 == 0):
+            x4 = 48
+
+        sleep(0.05)
+        offscreen_canvas = matrix.SwapOnVSync(offscreen_canvas)
+
+happyNewYearScroll()
