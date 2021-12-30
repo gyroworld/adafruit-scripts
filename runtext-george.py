@@ -1,7 +1,9 @@
 #!/usr/bin/python
 
-from rgbmatrix import RGBMatrix, RGBMatrixOptions, graphics, FrameCanvas
-import time
+from rgbmatrix import RGBMatrix, RGBMatrixOptions, graphics
+from time import sleep
+from datetime import datetime
+
 
 #Set matrix options
 options = RGBMatrixOptions()
@@ -25,25 +27,37 @@ purple = graphics.Color(255, 0, 255)
 red = graphics.Color(255, 0, 0)
 
 
+def timeLeft():
+    jan012022 = datetime(2022, 1, 1, 0, 0, 0, 0)
+    now = datetime.now()
+    diff = jan012022 - now
+    hours = str(int(diff.seconds/3600))
+    minutes = str(int(diff.seconds % 3600)/60)
+    seconds = str(diff.seconds % 60)
+    return [hours, minutes, seconds]
 
-#Draw line
-#DrawLine(core.Canvas c, int x1, int y1, int x2, int y2, Color color)
-#graphics.DrawLine(matrix, 1, 1, 10, 10, textColor)
-#Drawing on screen
-#time.sleep(5)
+def test1():
+    #DrawText(core.Canvas c, Font f, int x, int y, Color color, text):
+    print("Running Test1.")
+    graphics.DrawText(matrix, font, 0, 9, purple, "Test1")
+    sleep(5)
+    print("Test1 complete.")
 
-#DrawText(core.Canvas c, Font f, int x, int y, Color color, text):
-print("Running test1.")
-graphics.DrawText(matrix, font, 1, 10, purple, "Test1")
-time.sleep(5)
-print("Test1 complete.")
+def test2():
+    print("Running test2.")
+    i = 0
+    while i < 10:
+        offscreen_canvas.Clear()
+        graphics.DrawText(offscreen_canvas, font, 0, 10, red, "Test2")
+        sleep(0.5)
+        offscreen_canvas = matrix.SwapOnVSync(offscreen_canvas)
+        i += 1
+    print("Test2 complete.")
 
-print("Running test2.")
-i = 0
-while i < 10:
-    offscreen_canvas.Clear()
-    graphics.DrawText(offscreen_canvas, font, 1, 10, red, "Test2")
-    time.sleep(0.5)
-    offscreen_canvas = matrix.SwapOnVSync(offscreen_canvas)
-    i += 1
-print("Test2 complete.")
+def fontTest():
+    print(font)
+    print(font.CharacterWidth)
+    print(font.height)
+    print(font.baseline)
+
+fontTest()
