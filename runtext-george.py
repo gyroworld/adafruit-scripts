@@ -79,9 +79,9 @@ def happyNewYearStatic():
 def happyNewYearScroll():
     global offscreen_canvas
     x1 = 32
-    x2 = 50
-    x3 = 68
-    x4 = 84
+    x2 = 44
+    x3 = 56
+    x4 = 68
 
     while True:
         offscreen_canvas.Clear()
@@ -98,11 +98,11 @@ def happyNewYearScroll():
         if (x1 == 0):
             x1 = 32
         if (x2 == 0):
-            x2 = 50
+            x2 = 44
         if (x3 == 0):
-            x3 = 68
+            x3 = 56
         if (x4 == 0):
-            x4 = 84
+            x4 = 68
 
         sleep(0.05)
         offscreen_canvas = matrix.SwapOnVSync(offscreen_canvas)
