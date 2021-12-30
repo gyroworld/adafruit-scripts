@@ -68,10 +68,10 @@ def fontTest():
 
 def happyNewYear():
     print("Running happyNewYear.")
-    graphics.DrawText(matrix, font, 0, 8, green, "HAPPY")
-    graphics.DrawText(matrix, font, 0, 16, red, "NEW")
-    graphics.DrawText(matrix, font, 0, 24, purple, "YEAR")
-    graphics.DrawText(matrix, font, 0, 32, blue, "2022")
+    graphics.DrawText(matrix, font, 1, 8, green, "HAPPY")
+    graphics.DrawText(matrix, font, 7, 16, red, "NEW")
+    graphics.DrawText(matrix, font, 4, 24, purple, "YEAR")
+    graphics.DrawText(matrix, font, 4, 32, blue, "2022")
     sleep(300)
     print("happyNewYear complete.")
 
