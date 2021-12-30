@@ -6,8 +6,6 @@ import time
 #Set matrix options
 options = RGBMatrixOptions()
 options.rows = 32
-options.chain_length = 1
-options.parallel = 1
 options.hardware_mapping = 'adafruit-hat'
 options.disable_hardware_pulsing = True
 matrix = RGBMatrix(options = options)
@@ -21,7 +19,7 @@ textColor = graphics.Color(255, 0, 255)
 
 #Drawing on screen
 offscreen_canvas = matrix.CreateFrameCanvas()
-offscreen_canvas.Clear()
+#offscreen_canvas.Clear()
 graphics.DrawText(offscreen_canvas, font, 32, 10, textColor, "Test")
 #matrix.SwapOnVSync(offscreen_canvas)
 
