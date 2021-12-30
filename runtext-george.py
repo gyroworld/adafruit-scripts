@@ -120,8 +120,8 @@ def happyNewYearScroll2():
 
         x -= 1
 
-        if (x1 == -36):
-            x1 = 32
+        if (x == -36):
+            x = 32
 
         sleep(0.05)
         offscreen_canvas = matrix.SwapOnVSync(offscreen_canvas)
