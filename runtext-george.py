@@ -114,7 +114,7 @@ def happyNewYearScroll2():
     while True:
         offscreen_canvas.Clear()
         graphics.DrawText(matrix, font, x, 8, green, "HAPPY")
-        graphics.DrawText(matrix, font, x+12, 16, red, "NEW")
+        graphics.DrawText(matrix, font, x+15, 16, red, "NEW")
         graphics.DrawText(matrix, font, x+24, 24, purple, "YEAR")
         graphics.DrawText(matrix, font, x+36, 32, blue, "2022")
 
