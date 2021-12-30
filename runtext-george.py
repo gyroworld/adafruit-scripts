@@ -72,7 +72,7 @@ def happyNewYear():
     graphics.DrawText(matrix, font, 0, 16, red, "NEW")
     graphics.DrawText(matrix, font, 0, 24, purple, "YEAR")
     graphics.DrawText(matrix, font, 0, 32, blue, "2022")
-    sleep(30)
+    sleep(300)
     print("happyNewYear complete.")
 
 
