@@ -22,7 +22,7 @@ offscreen_canvas = matrix.CreateFrameCanvas()
 font = graphics.Font()
 font.LoadFont("/home/pi/rpi-rgb-led-matrix/fonts/4x6.bdf")
 
-#Set color
+#Set colors
 purple = graphics.Color(255, 0, 255)
 red = graphics.Color(255, 0, 0)
 green = graphics.Color(0, 255, 0)
