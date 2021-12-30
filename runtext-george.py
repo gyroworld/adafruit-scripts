@@ -25,6 +25,9 @@ font.LoadFont("/home/pi/rpi-rgb-led-matrix/fonts/4x6.bdf")
 #Set color
 purple = graphics.Color(255, 0, 255)
 red = graphics.Color(255, 0, 0)
+green = graphics.Color(0, 255, 0)
+blue = graphics.Color(0, 0, 255)
+white = graphics.Color(255, 255, 255)
 
 
 def timeLeft():
@@ -60,4 +63,3 @@ def fontTest():
     print(font.height)
     print(font.baseline)
 
-fontTest()
