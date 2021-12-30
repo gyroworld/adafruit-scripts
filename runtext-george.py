@@ -6,13 +6,15 @@ import time
 #Set matrix options
 options = RGBMatrixOptions()
 options.rows = 32
-options.cols = 32
+options.chain_length = 1
+options.parallel = 1
 options.hardware_mapping = 'adafruit-hat'
 options.disable_hardware_pulsing = True
-matrix = RGBMatrix(options = options)
+
 
 #Create canvas
-offscreen_canvas = matrix.CreateFrameCanvas()
+canvas = RGBMatrix(options = options)
+offscreen_canvas = canvas.CreateFrameCanvas()
 
 #Set font
 font = graphics.Font()
@@ -24,14 +26,14 @@ textColor = graphics.Color(255, 0, 255)
 
 #Draw line
 #DrawLine(core.Canvas c, int x1, int y1, int x2, int y2, Color color)
-graphics.DrawLine(matrix, 1, 1, 10, 10, textColor)
+#graphics.DrawLine(canvas, 1, 1, 10, 10, textColor)
 #Drawing on screen
-time.sleep(5)
+#time.sleep(5)
 
 offscreen_canvas.Clear()
 #DrawText(core.Canvas c, Font f, int x, int y, Color color, text):
-graphics.DrawText(matrix, font, 32, 10, textColor, "Test")
-matrix.SwapOnVSync(offscreen_canvas)
+graphics.DrawText(canvas, font, 1, 10, textColor, "Test")
+canvas.SwapOnVSync(offscreen_canvas)
 
 print('ran')
 time.sleep(5)
