@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-from rgbmatrix import RGBMatrix, RGBMatrixOptions, graphics
+from rgbmatrix import RGBMatrix, RGBMatrixOptions, graphics, FrameCanvas
 import time
 
 #Set matrix options
@@ -29,7 +29,8 @@ graphics.DrawLine(matrix, 1, 1, 10, 10, textColor)
 time.sleep(5)
 
 offscreen_canvas.Clear()
-graphics.DrawText(offscreen_canvas, font, 32, 10, textColor, "Test")
+#DrawText(core.Canvas c, Font f, int x, int y, Color color, text):
+graphics.DrawText(matrix, font, 32, 10, textColor, "Test")
 matrix.SwapOnVSync(offscreen_canvas)
 
 print('ran')
