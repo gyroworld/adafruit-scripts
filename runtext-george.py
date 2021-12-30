@@ -120,7 +120,7 @@ def happyNewYearScroll2():
 
         x -= 1
 
-        if (x == -59):
+        if (x == -58):
             x = 32
 
         sleep(0.05)
