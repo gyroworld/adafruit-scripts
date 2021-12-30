@@ -33,6 +33,7 @@ white = graphics.Color(255, 255, 255)
 def countdown():
     print("Running countdown timer.")
     i = 59
+    global offscreen_canvas
     while i > 0:
         offscreen_canvas.Clear()
         graphics.DrawText(offscreen_canvas, font, 0, 10, white, i)
