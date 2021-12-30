@@ -36,7 +36,7 @@ def countdown():
     global offscreen_canvas
     while i > 0:
         offscreen_canvas.Clear()
-        graphics.DrawText(offscreen_canvas, font, 0, 10, white, i)
+        graphics.DrawText(offscreen_canvas, font, 0, 10, white, str(i))
         offscreen_canvas = matrix.SwapOnVSync(offscreen_canvas)
         sleep(1)
         i -= 1
