@@ -20,8 +20,7 @@ offscreen_canvas = matrix.CreateFrameCanvas()
 
 #Set font
 font = graphics.Font()
-font.LoadFont("/home/pi/rpi-rgb-led-matrix/fonts/10x20.bdf")
-#font.LoadFont("/home/pi/rpi-rgb-led-matrix/fonts/texgyre-27.bdf")
+font.LoadFont("/home/pi/rpi-rgb-led-matrix/fonts/texgyre-27.bdf")
 
 #Set colors
 purple = graphics.Color(255, 0, 255)
@@ -36,7 +35,7 @@ def countdown():
     global offscreen_canvas
     while i > 0:
         offscreen_canvas.Clear()
-        graphics.DrawText(offscreen_canvas, font, 0, 10, white, str(i))
+        graphics.DrawText(offscreen_canvas, font, 1, 26, white, str(i))
         offscreen_canvas = matrix.SwapOnVSync(offscreen_canvas)
         sleep(1)
         i -= 1
