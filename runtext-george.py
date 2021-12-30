@@ -21,7 +21,7 @@ offscreen_canvas = matrix.CreateFrameCanvas()
 #Set font
 font = graphics.Font()
 #font.LoadFont("/home/pi/rpi-rgb-led-matrix/fonts/4x6.bdf")
-font.LoadFont("/home/pi/rpi-rgb-led-matrix/fonts/5x7.bdf")
+font.LoadFont("/home/pi/rpi-rgb-led-matrix/fonts/6x10.bdf")
 
 #Set colors
 purple = graphics.Color(255, 0, 255)
@@ -44,8 +44,8 @@ def test1():
     #DrawText(core.Canvas c, Font f, int x, int y, Color color, text):
     print("Running Test1.")
     graphics.DrawText(matrix, font, 9, 6, green, "NYE")
-    graphics.DrawText(matrix, font, 0, 14, red, "2022")
-    sleep(5)
+    graphics.DrawText(matrix, font, 6, 14, red, "2022")
+    sleep(30)
     print("Test1 complete.")
 
 def test2():
@@ -66,4 +66,14 @@ def fontTest():
     print(font.height)
     print(font.baseline)
 
-test1()
+def happyNewYear():
+    print("Running happyNewYear.")
+    graphics.DrawText(matrix, font, 0, 8, green, "HAPPY")
+    graphics.DrawText(matrix, font, 0, 16, red, "NEW")
+    graphics.DrawText(matrix, font, 0, 24, purple, "YEAR")
+    graphics.DrawText(matrix, font, 0, 32, blue, "2022")
+    sleep(30)
+    print("happyNewYear complete.")
+
+
+happyNewYear()
