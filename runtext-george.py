@@ -49,6 +49,7 @@ def test1():
 def test2():
     print("Running test2.")
     i = 0
+    global offscreen_canvas
     while i < 10:
         offscreen_canvas.Clear()
         graphics.DrawText(offscreen_canvas, font, 0, 10, red, "Test2")
