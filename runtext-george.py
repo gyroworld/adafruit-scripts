@@ -63,3 +63,5 @@ def fontTest():
     print(font.height)
     print(font.baseline)
 
+test1()
+test2()
