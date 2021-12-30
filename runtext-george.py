@@ -107,4 +107,23 @@ def happyNewYearScroll():
         sleep(0.05)
         offscreen_canvas = matrix.SwapOnVSync(offscreen_canvas)
 
-happyNewYearScroll()
+def happyNewYearScroll2():
+    global offscreen_canvas
+    x = 32
+
+    while True:
+        offscreen_canvas.Clear()
+        graphics.DrawText(matrix, font, x, 8, green, "HAPPY")
+        graphics.DrawText(matrix, font, x+12, 16, red, "NEW")
+        graphics.DrawText(matrix, font, x+24, 24, purple, "YEAR")
+        graphics.DrawText(matrix, font, x+36, 32, blue, "2022")
+
+        x -= 1
+
+        if (x1 == -36):
+            x1 = 32
+
+        sleep(0.05)
+        offscreen_canvas = matrix.SwapOnVSync(offscreen_canvas)
+
+happyNewYearScroll2()
