@@ -40,7 +40,7 @@ black = graphics.Color(0, 0, 0)
 
 def timeLeft():
     #jan012022 = datetime(2022, 1, 1, 0, 0, 0, 0)
-    jan012022 = datetime(2021, 12, 31, 10, 51, 0, 0)
+    jan012022 = datetime(2021, 12, 31, 10, 57, 0, 0)
     now = datetime.now()
     diff = jan012022 - now
     hours = int(diff.seconds/3600)
@@ -197,8 +197,8 @@ def minuteCountdown():
         offscreen_canvas.Clear()
         time = timeLeft()
 
-        print(time[2])
         if time[2] == 0:
+            offscreen_canvas.Clear()
             break
 
         graphics.DrawText(offscreen_canvas, font_large, 1, 26, white, str('{:0>2}'.format(time[2])))
@@ -212,4 +212,4 @@ def main():
     happyNewYearFlashing()
     happyNewYearScroll2()
 
-minuteCountdown()
+main()
