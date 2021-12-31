@@ -252,7 +252,7 @@ while True:
             matrix.SetPixel(x-3, y+3, 0, 0, 0)
 
         #offscreen_canvas = matrix.SwapOnVSync(offscreen_canvas)
-        sleep(.5)
+        sleep(.1)
 
     else:
         #offscreen_canvas.Clear()
