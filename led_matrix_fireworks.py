@@ -5,8 +5,8 @@ from time import sleep
 from datetime import datetime
 import sys
 
-x = sys.argv[1]
-y = sys.argv[2]
+x = int(sys.argv[1])
+y = int(sys.argv[2])
 
 
 # Set matrix options
