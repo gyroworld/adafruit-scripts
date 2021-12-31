@@ -59,7 +59,7 @@ def test2():
         graphics.DrawText(matrix, font, 9, 8, green, "NYE")
         graphics.DrawText(matrix, font, 6, 16, red, "2021")
         graphics.DrawText(matrix, font_small, 0, 24, purple, "Countdown")
-        graphics.DrawText(matrix, font, 6, 16, blue, str(time[0]) + ':' + str(time[1]))
+        graphics.DrawText(matrix, font, 6, 32, blue, str(time[0]) + ':' + str(time[1]))
         sleep(1)
         offscreen_canvas = matrix.SwapOnVSync(offscreen_canvas)
 
