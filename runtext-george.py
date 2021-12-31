@@ -39,7 +39,7 @@ def timeLeft():
     now = datetime.now()
     diff = jan012022 - now
     hours = str(int(diff.seconds/3600))
-    minutes = str(int(diff.seconds % 3600)/60)
+    minutes = str(int((diff.seconds % 3600)/60))
     seconds = str(diff.seconds % 60)
     return [hours, minutes, seconds]
 
@@ -58,7 +58,7 @@ def test2():
         offscreen_canvas.Clear()
         graphics.DrawText(matrix, font, 9, 8, green, "NYE")
         graphics.DrawText(matrix, font, 6, 16, red, "2021")
-        graphics.DrawText(matrix, font_small, 0, 22, purple, "Timer")
+        graphics.DrawText(matrix, font_small, 0, 22, purple, "Countdown")
         graphics.DrawText(matrix, font, 6, 31, blue, str(time[0]) + ':' + str(time[1]))
         sleep(1)
         offscreen_canvas = matrix.SwapOnVSync(offscreen_canvas)
