@@ -60,8 +60,10 @@ def test2():
         graphics.DrawText(matrix, font, 9, 8, green, "NYE")
         graphics.DrawText(matrix, font, 6, 16, red, "2021")
         graphics.DrawText(matrix, font, x, 24, purple, "Countdown")
-        graphics.DrawText(matrix, font_small, 0, 32, blue, str(time[1]) +  'm' + str(time[2]) + 's')
-        
+        graphics.DrawText(matrix, font_small, 0, 32, blue, str(time[0]))
+        graphics.DrawText(matrix, font_small, 0, 32, blue, str(time[1]))
+        graphics.DrawText(matrix, font_small, 0, 32, blue, str(time[2]))
+
         x -= 1
 
         if (x == -53):
@@ -72,9 +74,9 @@ def test2():
         offscreen_canvas = matrix.SwapOnVSync(offscreen_canvas)
 
 
-def fontTest():
+def fontTest(char):
     print(font)
-    print(font.CharacterWidth)
+    print(font.CharacterWidth(char))
     print(font.height)
     print(font.baseline)
 
@@ -138,4 +140,5 @@ def happyNewYearScroll2():
         sleep(0.05)
         offscreen_canvas = matrix.SwapOnVSync(offscreen_canvas)
 
-test1()
+for x in range(0,10):
+    fontTest(x)
