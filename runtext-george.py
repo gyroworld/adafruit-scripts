@@ -59,8 +59,8 @@ def test2():
         offscreen_canvas.Clear()
         graphics.DrawText(matrix, font, 9, 8, green, "NYE")
         graphics.DrawText(matrix, font, 6, 16, red, "2021")
-        graphics.DrawText(matrix, font, x, 23, purple, "Countdown")
-        graphics.DrawText(matrix, font, 6, 31, blue, str(time[0]) + ':' + str(time[1]))
+        graphics.DrawText(matrix, font, x, 24, purple, "Countdown")
+        graphics.DrawText(matrix, font, x, 32, blue, str(time[0]) + 'h' + str(time[1]) + 'm' + str(time[2]) + 's')
         
         x -= 1
 
