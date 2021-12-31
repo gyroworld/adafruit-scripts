@@ -58,8 +58,8 @@ while True:
             #Center square
             matrix.SetPixel(x-1, y+1, 0, 204, 204)
             matrix.SetPixel(x-1, y-1, 0, 204, 204)
-            matrix.SetPixel(x+1, y+1, 0, 204, 204)
-            matrix.SetPixel(x+1, y-1, 0, 204, 204)
+            #matrix.SetPixel(x+1, y+1, 0, 204, 204)
+            #matrix.SetPixel(x+1, y-1, 0, 204, 204)
 
             #Middle square
             matrix.SetPixel(x, y+2, 255, 255, 255)
