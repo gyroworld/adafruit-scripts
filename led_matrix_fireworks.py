@@ -63,13 +63,13 @@ while True:
 
             #Middle square
             matrix.SetPixel(x, y+2, 255, 255, 255)
-            matrix.SetPixel(x+2, y+2, 255, 255, 255)
+            #matrix.SetPixel(x+2, y+2, 255, 255, 255)
             matrix.SetPixel(x+2, y, 255, 255, 255)
-            matrix.SetPixel(x+2, y-2, 255, 255, 255)
+            #matrix.SetPixel(x+2, y-2, 255, 255, 255)
             matrix.SetPixel(x, y-2, 255, 255, 255)
-            matrix.SetPixel(x-2, y-2, 255, 255, 255)
+            #matrix.SetPixel(x-2, y-2, 255, 255, 255)
             matrix.SetPixel(x-2, y, 255, 255, 255)
-            matrix.SetPixel(x-2, y+2, 255, 255, 255)
+            #matrix.SetPixel(x-2, y+2, 255, 255, 255)
 
         
         elif i == 3:
