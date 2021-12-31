@@ -60,16 +60,16 @@ def test2():
     while True:
         time = timeLeft()
         offscreen_canvas.Clear()
-        graphics.DrawText(matrix, font, 9, 8, green, "NYE")
-        graphics.DrawText(matrix, font, 6, 16, red, "2021")
+        graphics.DrawText(matrix, font, 7, 8, green, "NYE")
+        graphics.DrawText(matrix, font, 4, 16, red, "2021")
         graphics.DrawText(matrix, font, x, 24, purple, "Countdown")
-        graphics.DrawText(matrix, font_small, 0, 31, light_blue, str(time[0]))
-        graphics.DrawText(matrix, font_small, 12, 31, light_blue, str(time[1]))
-        graphics.DrawText(matrix, font_small, 23, 31, light_blue, str(time[2]))
+        graphics.DrawText(matrix, font_small, -1, 31, light_blue, str(time[0]))
+        graphics.DrawText(matrix, font_small, 11, 31, light_blue, str(time[1]))
+        graphics.DrawText(matrix, font_small, 22, 31, light_blue, str(time[2]))
 
         #matrix.SetPixel(10, 26, 255, 255, 255)
-        matrix.SetPixel(10, 27, 255, 255, 255)
-        matrix.SetPixel(10, 28, 255, 255, 255)
+        matrix.SetPixel(9, 27, 255, 255, 255)
+        matrix.SetPixel(9, 28, 255, 255, 255)
         #matrix.SetPixel(10, 30, 255, 255, 255)
 
         #matrix.SetPixel(21, 26, 255, 255, 255)
