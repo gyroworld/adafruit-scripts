@@ -75,7 +75,7 @@ def test2():
 
 
 def fontTest(char):
-    print(font)
+    print('Character :' + char)
     print(font.CharacterWidth(char))
     print(font.height)
     print(font.baseline)
