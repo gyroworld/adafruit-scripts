@@ -40,10 +40,10 @@ while True:
             matrix.SetPixel(x, y-1, 255, 255, 255)
 
             #Center square
-            #matrix.SetPixel(x-1, y+1, 0, 255, 255)
-            #matrix.SetPixel(x+1, y+1, 0, 255, 255)
-            #matrix.SetPixel(x-1, y-1, 0, 255, 255)
-            #matrix.SetPixel(x+1, y-1, 0, 255, 255)
+            matrix.SetPixel(x-1, y+1, 0, 255, 255)
+            matrix.SetPixel(x+1, y+1, 0, 255, 255)
+            matrix.SetPixel(x-1, y-1, 0, 255, 255)
+            matrix.SetPixel(x+1, y-1, 0, 255, 255)
 
         elif i == 2:
             #Center pixel
@@ -252,7 +252,7 @@ while True:
             matrix.SetPixel(x-3, y+3, 0, 0, 0)
 
         #offscreen_canvas = matrix.SwapOnVSync(offscreen_canvas)
-        sleep(.1)
+        sleep(2)
 
     else:
         #offscreen_canvas.Clear()
