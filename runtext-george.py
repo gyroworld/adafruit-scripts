@@ -53,14 +53,22 @@ def test1():
 
 def test2():
     global offscreen_canvas
+    x = 32
     while True:
         time = timeLeft()
         offscreen_canvas.Clear()
         graphics.DrawText(matrix, font, 9, 8, green, "NYE")
         graphics.DrawText(matrix, font, 6, 16, red, "2021")
-        graphics.DrawText(matrix, font, 0, 24, purple, "Countdown")
+        graphics.DrawText(matrix, font, x, 23, purple, "Countdown")
         graphics.DrawText(matrix, font, 6, 31, blue, str(time[0]) + ':' + str(time[1]))
+        
+        x -= 1
+
+        if (x == -40):
+            x = 32
+
         sleep(1)
+
         offscreen_canvas = matrix.SwapOnVSync(offscreen_canvas)
 
 
