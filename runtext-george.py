@@ -67,15 +67,15 @@ def test2():
         graphics.DrawText(matrix, font, 11, 32, light_blue, str(time[1]))
         graphics.DrawText(matrix, font, 22, 32, light_blue, str(time[2]))
 
-        matrix.SetPixel(10, 1, 255, 255, 255)
-        matrix.SetPixel(10, 2, 255, 255, 255)
-        matrix.SetPixel(10, 4, 255, 255, 255)
-        matrix.SetPixel(10, 5, 255, 255, 255)
+        matrix.SetPixel(10, 27, 255, 255, 255)
+        matrix.SetPixel(10, 28, 255, 255, 255)
+        matrix.SetPixel(10, 30, 255, 255, 255)
+        matrix.SetPixel(10, 31, 255, 255, 255)
 
-        matrix.SetPixel(21, 1, 255, 255, 255)
-        matrix.SetPixel(21, 2, 255, 255, 255)
-        matrix.SetPixel(21, 4, 255, 255, 255)
-        matrix.SetPixel(21, 5, 255, 255, 255)
+        matrix.SetPixel(21, 27, 255, 255, 255)
+        matrix.SetPixel(21, 28, 255, 255, 255)
+        matrix.SetPixel(21, 30, 255, 255, 255)
+        matrix.SetPixel(21, 31, 255, 255, 255)
 
         x -= 1
 
