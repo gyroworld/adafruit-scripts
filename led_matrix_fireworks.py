@@ -7,7 +7,21 @@ import sys
 
 x = int(sys.argv[1])
 y = int(sys.argv[2])
+color1 = sys.argv[3]
+color2 = sys.argv[4]
+color3 = sys.argv[5]
 
+c1r = int(color1[0])
+c1g = int(color1[1])
+c1b = int(color1[2])
+
+c2r = int(color2[0])
+c2g = int(color2[1])
+c2b = int(color2[2])
+
+c3r = int(color3[0])
+c3g = int(color3[1])
+c3b = int(color3[2])
 
 # Set matrix options
 options = RGBMatrixOptions()
@@ -31,7 +45,7 @@ while True:
 
         elif i == 1:
             #Center pixel
-            matrix.SetPixel(x, y, 0, 204, 204)
+            matrix.SetPixel(x, y, c1r, c1g, c1b)
 
             #Center cross
             matrix.SetPixel(x+1, y, 255, 255, 255)
@@ -40,26 +54,26 @@ while True:
             matrix.SetPixel(x, y-1, 255, 255, 255)
 
             #Center square
-            #matrix.SetPixel(x-1, y+1, 0, 204, 204)
-            #matrix.SetPixel(x+1, y+1, 0, 204, 204)
-            #matrix.SetPixel(x-1, y-1, 0, 204, 204)
-            #matrix.SetPixel(x+1, y-1, 0, 204, 204)
+            #matrix.SetPixel(x-1, y+1, c1r, c1g, c1b)
+            #matrix.SetPixel(x+1, y+1, c1r, c1g, c1b)
+            #matrix.SetPixel(x-1, y-1, c1r, c1g, c1b)
+            #matrix.SetPixel(x+1, y-1, c1r, c1g, c1b)
 
         elif i == 2:
             #Center pixel
-            matrix.SetPixel(x, y, 0, 153, 153)
+            matrix.SetPixel(x, y, c2r, c2g, c2b)
 
             #Center cross
-            matrix.SetPixel(x+1, y, 0, 153, 153)
-            matrix.SetPixel(x-1, y, 0, 153, 153)
-            matrix.SetPixel(x, y+1, 0, 153, 153)
-            matrix.SetPixel(x, y-1, 0, 153, 153)
+            matrix.SetPixel(x+1, y, c2r, c2g, c2b)
+            matrix.SetPixel(x-1, y, c2r, c2g, c2b)
+            matrix.SetPixel(x, y+1, c2r, c2g, c2b)
+            matrix.SetPixel(x, y-1, c2r, c2g, c2b)
 
             #Center square
-            matrix.SetPixel(x-1, y+1, 0, 204, 204)
-            matrix.SetPixel(x-1, y-1, 0, 204, 204)
-            matrix.SetPixel(x+1, y+1, 0, 204, 204)
-            matrix.SetPixel(x+1, y-1, 0, 204, 204)
+            matrix.SetPixel(x-1, y+1, c1r, c1g, c1b)
+            matrix.SetPixel(x-1, y-1, c1r, c1g, c1b)
+            matrix.SetPixel(x+1, y+1, c1r, c1g, c1b)
+            matrix.SetPixel(x+1, y-1, c1r, c1g, c1b)
 
             #Middle square
             matrix.SetPixel(x, y+2, 255, 255, 255)
@@ -74,28 +88,28 @@ while True:
         
         elif i == 3:
             #Center pixel
-            matrix.SetPixel(x, y, 0, 51, 51)
+            matrix.SetPixel(x, y, c3r, c3g, c3b)
 
             #Center cross
-            matrix.SetPixel(x+1, y, 0, 51, 51)
-            matrix.SetPixel(x-1, y, 0, 51, 51)
-            matrix.SetPixel(x, y+1, 0, 51, 51)
-            matrix.SetPixel(x, y-1, 0, 51, 51)
+            matrix.SetPixel(x+1, y, c3r, c3g, c3b)
+            matrix.SetPixel(x-1, y, c3r, c3g, c3b)
+            matrix.SetPixel(x, y+1, c3r, c3g, c3b)
+            matrix.SetPixel(x, y-1, c3r, c3g, c3b)
             
             #Center square
-            matrix.SetPixel(x-1, y+1, 0, 153, 153)
-            matrix.SetPixel(x-1, y-1, 0, 153, 153)
-            matrix.SetPixel(x+1, y+1, 0, 153, 153)
-            matrix.SetPixel(x+1, y-1, 0, 153, 153)
+            matrix.SetPixel(x-1, y+1, c2r, c2g, c2b)
+            matrix.SetPixel(x-1, y-1, c2r, c2g, c2b)
+            matrix.SetPixel(x+1, y+1, c2r, c2g, c2b)
+            matrix.SetPixel(x+1, y-1, c2r, c2g, c2b)
 
             #Middle square
-            matrix.SetPixel(x, y+2, 0, 204, 204)
+            matrix.SetPixel(x, y+2, c1r, c1g, c1b)
             matrix.SetPixel(x+2, y+2, 255, 255, 255)
-            matrix.SetPixel(x+2, y, 0, 204, 204)
+            matrix.SetPixel(x+2, y, c1r, c1g, c1b)
             matrix.SetPixel(x+2, y-2, 255, 255, 255)
-            matrix.SetPixel(x, y-2, 0, 204, 204)
+            matrix.SetPixel(x, y-2, c1r, c1g, c1b)
             matrix.SetPixel(x-2, y-2, 255, 255, 255)
-            matrix.SetPixel(x-2, y, 0, 204, 204)
+            matrix.SetPixel(x-2, y, c1r, c1g, c1b)
             matrix.SetPixel(x-2, y+2, 255, 255, 255)
             
             #Outer square
@@ -125,24 +139,24 @@ while True:
             matrix.SetPixel(x+1, y-1, 0, 54, 54)
 
             #Middle square
-            matrix.SetPixel(x, y+2, 0, 153, 153)
-            matrix.SetPixel(x+2, y+2, 0, 153, 153)
-            matrix.SetPixel(x+2, y, 0, 153, 153)
-            matrix.SetPixel(x+2, y-2, 0, 153, 153)
-            matrix.SetPixel(x, y-2, 0, 153, 153)
-            matrix.SetPixel(x-2, y-2, 0, 153, 153)
-            matrix.SetPixel(x-2, y, 0, 153, 153)
-            matrix.SetPixel(x-2, y+2, 0, 153, 153)
+            matrix.SetPixel(x, y+2, c2r, c2g, c2b)
+            matrix.SetPixel(x+2, y+2, c2r, c2g, c2b)
+            matrix.SetPixel(x+2, y, c2r, c2g, c2b)
+            matrix.SetPixel(x+2, y-2, c2r, c2g, c2b)
+            matrix.SetPixel(x, y-2, c2r, c2g, c2b)
+            matrix.SetPixel(x-2, y-2, c2r, c2g, c2b)
+            matrix.SetPixel(x-2, y, c2r, c2g, c2b)
+            matrix.SetPixel(x-2, y+2, c2r, c2g, c2b)
             
             #Outer square
-            matrix.SetPixel(x, y+3, 0, 204, 204)
-            #matrix.SetPixel(x+3, y+3, 0, 204, 204)
-            matrix.SetPixel(x+3, y, 0, 204, 204)
-            #matrix.SetPixel(x+3, y-3, 0, 204, 204)
-            matrix.SetPixel(x, y-3, 0, 204, 204)
-            #matrix.SetPixel(x-3, y-3, 0, 204, 204)
-            matrix.SetPixel(x-3, y, 0, 204, 204)
-            #matrix.SetPixel(x-3, y+3, 0, 204, 204)
+            matrix.SetPixel(x, y+3, c1r, c1g, c1b)
+            #matrix.SetPixel(x+3, y+3, c1r, c1g, c1b)
+            matrix.SetPixel(x+3, y, c1r, c1g, c1b)
+            #matrix.SetPixel(x+3, y-3, c1r, c1g, c1b)
+            matrix.SetPixel(x, y-3, c1r, c1g, c1b)
+            #matrix.SetPixel(x-3, y-3, c1r, c1g, c1b)
+            matrix.SetPixel(x-3, y, c1r, c1g, c1b)
+            #matrix.SetPixel(x-3, y+3, c1r, c1g, c1b)
         
         elif i == 5:
             #Center pixel
@@ -170,14 +184,14 @@ while True:
             matrix.SetPixel(x-2, y, 0, 54, 54)
             matrix.SetPixel(x-2, y+2, 0, 54, 54)
             
-            matrix.SetPixel(x, y+3, 0, 153, 153)
-            #matrix.SetPixel(x+3, y+3, 0, 153, 153)
-            matrix.SetPixel(x+3, y, 0, 153, 153)
-            #matrix.SetPixel(x+3, y-3, 0, 153, 153)
-            matrix.SetPixel(x, y-3, 0, 153, 153)
-            #matrix.SetPixel(x-3, y-3, 0, 153, 153)
-            matrix.SetPixel(x-3, y, 0, 153, 153)
-            #matrix.SetPixel(x-3, y+3, 0, 153, 153)
+            matrix.SetPixel(x, y+3, c2r, c2g, c2b)
+            #matrix.SetPixel(x+3, y+3, c2r, c2g, c2b)
+            matrix.SetPixel(x+3, y, c2r, c2g, c2b)
+            #matrix.SetPixel(x+3, y-3, c2r, c2g, c2b)
+            matrix.SetPixel(x, y-3, c2r, c2g, c2b)
+            #matrix.SetPixel(x-3, y-3, c2r, c2g, c2b)
+            matrix.SetPixel(x-3, y, c2r, c2g, c2b)
+            #matrix.SetPixel(x-3, y+3, c2r, c2g, c2b)
 
         elif i == 6:
             #Center pixel
