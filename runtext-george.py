@@ -64,10 +64,10 @@ def test2():
         
         x -= 1
 
-        if (x == -54):
+        if (x == -53):
             x = 32
 
-        sleep(1)
+        sleep(.25)
 
         offscreen_canvas = matrix.SwapOnVSync(offscreen_canvas)
 
