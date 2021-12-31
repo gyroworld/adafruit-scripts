@@ -197,6 +197,7 @@ def minuteCountdown():
         offscreen_canvas.Clear()
         time = timeLeft()
 
+        print(time[2])
         if time[2] == 0:
             break
 
@@ -211,4 +212,4 @@ def main():
     happyNewYearFlashing()
     happyNewYearScroll2()
 
-main()
+minuteCountdown()
