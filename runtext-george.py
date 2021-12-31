@@ -141,4 +141,4 @@ def happyNewYearScroll2():
         offscreen_canvas = matrix.SwapOnVSync(offscreen_canvas)
 
 for x in range(0,10):
-    fontTest(str(x))
+    fontTest(x)
