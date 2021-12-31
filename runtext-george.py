@@ -60,7 +60,7 @@ def test2():
         graphics.DrawText(matrix, font, 9, 8, green, "NYE")
         graphics.DrawText(matrix, font, 6, 16, red, "2021")
         graphics.DrawText(matrix, font, x, 24, purple, "Countdown")
-        graphics.DrawText(matrix, font_small, 0, 32, blue, str(time[0]) + ':' + str(time[1]) + ':' + str(time[2]))
+        graphics.DrawText(matrix, font_small, 0, 32, blue, '2:54:30')#str(time[0]) + ':' + str(time[1]) + ':' + str(time[2]))
         
         x -= 1
 
