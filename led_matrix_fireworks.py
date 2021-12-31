@@ -90,13 +90,13 @@ while True:
 
             #Middle square
             matrix.SetPixel(x, y+2, 0, 204, 204)
-            #matrix.SetPixel(x+2, y+2, 0, 204, 204)
+            matrix.SetPixel(x+2, y+2, 255, 255, 255)
             matrix.SetPixel(x+2, y, 0, 204, 204)
-            #matrix.SetPixel(x+2, y-2, 0, 204, 204)
+            matrix.SetPixel(x+2, y-2, 255, 255, 255)
             matrix.SetPixel(x, y-2, 0, 204, 204)
-            #matrix.SetPixel(x-2, y-2, 0, 204, 204)
+            matrix.SetPixel(x-2, y-2, 255, 255, 255)
             matrix.SetPixel(x-2, y, 0, 204, 204)
-            #matrix.SetPixel(x-2, y+2, 0, 204, 204)
+            matrix.SetPixel(x-2, y+2, 255, 255, 255)
             
             #Outer square
             matrix.SetPixel(x, y+3, 255, 255, 255)
