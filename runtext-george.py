@@ -63,19 +63,19 @@ def test2():
         graphics.DrawText(matrix, font, 9, 8, green, "NYE")
         graphics.DrawText(matrix, font, 6, 16, red, "2021")
         graphics.DrawText(matrix, font, x, 24, purple, "Countdown")
-        graphics.DrawText(matrix, font, 0, 32, light_blue, str(time[0]))
-        graphics.DrawText(matrix, font, 11, 32, light_blue, str(time[1]))
-        graphics.DrawText(matrix, font, 22, 32, light_blue, str(time[2]))
+        graphics.DrawText(matrix, font_small, 0, 32, light_blue, str(time[0]))
+        graphics.DrawText(matrix, font_small, 11, 32, light_blue, str(time[1]))
+        graphics.DrawText(matrix, font_small, 22, 32, light_blue, str(time[2]))
 
+        matrix.SetPixel(10, 26, 255, 255, 255)
         matrix.SetPixel(10, 27, 255, 255, 255)
-        matrix.SetPixel(10, 28, 255, 255, 255)
+        matrix.SetPixel(10, 29, 255, 255, 255)
         matrix.SetPixel(10, 30, 255, 255, 255)
-        matrix.SetPixel(10, 31, 255, 255, 255)
 
+        matrix.SetPixel(21, 26, 255, 255, 255)
         matrix.SetPixel(21, 27, 255, 255, 255)
-        matrix.SetPixel(21, 28, 255, 255, 255)
+        matrix.SetPixel(21, 29, 255, 255, 255)
         matrix.SetPixel(21, 30, 255, 255, 255)
-        matrix.SetPixel(21, 31, 255, 255, 255)
 
         x -= 1
 
