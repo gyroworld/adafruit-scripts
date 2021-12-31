@@ -40,10 +40,10 @@ while True:
             matrix.SetPixel(x, y-1, 255, 255, 255)
 
             #Center square
-            matrix.SetPixel(x-1, y+1, 0, 204, 204)
-            matrix.SetPixel(x+1, y+1, 0, 204, 204)
-            matrix.SetPixel(x-1, y-1, 0, 204, 204)
-            matrix.SetPixel(x+1, y-1, 0, 204, 204)
+            #matrix.SetPixel(x-1, y+1, 0, 204, 204)
+            #matrix.SetPixel(x+1, y+1, 0, 204, 204)
+            #matrix.SetPixel(x-1, y-1, 0, 204, 204)
+            #matrix.SetPixel(x+1, y-1, 0, 204, 204)
 
         elif i == 2:
             #Center pixel
