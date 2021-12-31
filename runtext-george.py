@@ -46,8 +46,8 @@ def timeLeft():
 def test1():
     #DrawText(core.Canvas c, Font f, int x, int y, Color color, text):
     print("Running Test1.")
-    graphics.DrawText(matrix, font, 9, 6, green, "NYE")
-    graphics.DrawText(matrix, font, 6, 14, red, "2021")
+    graphics.DrawText(matrix, font, 0, 6, green, "Looks")
+    graphics.DrawText(matrix, font, 0, 14, red, "Good!")
     sleep(30)
     print("Test1 complete.")
 
@@ -138,4 +138,4 @@ def happyNewYearScroll2():
         sleep(0.05)
         offscreen_canvas = matrix.SwapOnVSync(offscreen_canvas)
 
-test2()
+test1()
