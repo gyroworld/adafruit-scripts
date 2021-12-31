@@ -32,6 +32,9 @@ red = graphics.Color(255, 0, 0)
 green = graphics.Color(0, 255, 0)
 blue = graphics.Color(0, 0, 255)
 white = graphics.Color(255, 255, 255)
+orange = graphics.Color(255, 128, 0)
+light_blue = graphics.Color(0, 128, 255)
+
 
 
 def timeLeft():
@@ -41,7 +44,7 @@ def timeLeft():
     hours = str(int(diff.seconds/3600))
     minutes = str(int((diff.seconds % 3600)/60))
     seconds = str(diff.seconds % 60)
-    return [hours, minutes, seconds]
+    return ['{:0>2}'.format(hours), '{:0>2}'.format(minutes), '{:0>2}'.format(seconds)]
 
 def test1():
     #DrawText(core.Canvas c, Font f, int x, int y, Color color, text):
@@ -60,9 +63,19 @@ def test2():
         graphics.DrawText(matrix, font, 9, 8, green, "NYE")
         graphics.DrawText(matrix, font, 6, 16, red, "2021")
         graphics.DrawText(matrix, font, x, 24, purple, "Countdown")
-        graphics.DrawText(matrix, font_small, 0, 32, blue, str(time[0]))
-        graphics.DrawText(matrix, font_small, 0, 32, blue, str(time[1]))
-        graphics.DrawText(matrix, font_small, 0, 32, blue, str(time[2]))
+        graphics.DrawText(matrix, font, 0, 32, light_blue, str(time[0]))
+        graphics.DrawText(matrix, font, 11, 32, light_blue, str(time[1]))
+        graphics.DrawText(matrix, font, 22, 32, light_blue, str(time[2]))
+
+        matrix.SetPixel(10, 1, 255, 255, 255)
+        matrix.SetPixel(10, 2, 255, 255, 255)
+        matrix.SetPixel(10, 4, 255, 255, 255)
+        matrix.SetPixel(10, 5, 255, 255, 255)
+
+        matrix.SetPixel(21, 1, 255, 255, 255)
+        matrix.SetPixel(21, 2, 255, 255, 255)
+        matrix.SetPixel(21, 4, 255, 255, 255)
+        matrix.SetPixel(21, 5, 255, 255, 255)
 
         x -= 1
 
@@ -140,5 +153,4 @@ def happyNewYearScroll2():
         sleep(0.05)
         offscreen_canvas = matrix.SwapOnVSync(offscreen_canvas)
 
-for x in range(0,10):
-    fontTest(x)
+test2()
