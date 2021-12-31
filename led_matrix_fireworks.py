@@ -100,13 +100,13 @@ while True:
             
             #Outer square
             matrix.SetPixel(x, y+3, 255, 255, 255)
-            matrix.SetPixel(x+3, y+3, 255, 255, 255)
+            #matrix.SetPixel(x+3, y+3, 255, 255, 255)
             matrix.SetPixel(x+3, y, 255, 255, 255)
-            matrix.SetPixel(x+3, y-3, 255, 255, 255)
+            #matrix.SetPixel(x+3, y-3, 255, 255, 255)
             matrix.SetPixel(x, y-3, 255, 255, 255)
-            matrix.SetPixel(x-3, y-3, 255, 255, 255)
+            #matrix.SetPixel(x-3, y-3, 255, 255, 255)
             matrix.SetPixel(x-3, y, 255, 255, 255)
-            matrix.SetPixel(x-3, y+3, 255, 255, 255)
+            #matrix.SetPixel(x-3, y+3, 255, 255, 255)
 
         elif i == 4:
             #Center pixel
@@ -136,13 +136,13 @@ while True:
             
             #Outer square
             matrix.SetPixel(x, y+3, 0, 204, 204)
-            matrix.SetPixel(x+3, y+3, 0, 204, 204)
+            #matrix.SetPixel(x+3, y+3, 0, 204, 204)
             matrix.SetPixel(x+3, y, 0, 204, 204)
-            matrix.SetPixel(x+3, y-3, 0, 204, 204)
+            #matrix.SetPixel(x+3, y-3, 0, 204, 204)
             matrix.SetPixel(x, y-3, 0, 204, 204)
-            matrix.SetPixel(x-3, y-3, 0, 204, 204)
+            #matrix.SetPixel(x-3, y-3, 0, 204, 204)
             matrix.SetPixel(x-3, y, 0, 204, 204)
-            matrix.SetPixel(x-3, y+3, 0, 204, 204)
+            #matrix.SetPixel(x-3, y+3, 0, 204, 204)
         
         elif i == 5:
             #Center pixel
@@ -171,13 +171,13 @@ while True:
             matrix.SetPixel(x-2, y+2, 0, 54, 54)
             
             matrix.SetPixel(x, y+3, 0, 153, 153)
-            matrix.SetPixel(x+3, y+3, 0, 153, 153)
+            #matrix.SetPixel(x+3, y+3, 0, 153, 153)
             matrix.SetPixel(x+3, y, 0, 153, 153)
-            matrix.SetPixel(x+3, y-3, 0, 153, 153)
+            #matrix.SetPixel(x+3, y-3, 0, 153, 153)
             matrix.SetPixel(x, y-3, 0, 153, 153)
-            matrix.SetPixel(x-3, y-3, 0, 153, 153)
+            #matrix.SetPixel(x-3, y-3, 0, 153, 153)
             matrix.SetPixel(x-3, y, 0, 153, 153)
-            matrix.SetPixel(x-3, y+3, 0, 153, 153)
+            #matrix.SetPixel(x-3, y+3, 0, 153, 153)
 
         elif i == 6:
             #Center pixel
@@ -207,13 +207,13 @@ while True:
             
             #Outer square
             matrix.SetPixel(x, y+3, 0, 54, 54)
-            matrix.SetPixel(x+3, y+3, 0, 54, 54)
+            #matrix.SetPixel(x+3, y+3, 0, 54, 54)
             matrix.SetPixel(x+3, y, 0, 54, 54)
-            matrix.SetPixel(x+3, y-3, 0, 54, 54)
+            #matrix.SetPixel(x+3, y-3, 0, 54, 54)
             matrix.SetPixel(x, y-3, 0, 54, 54)
-            matrix.SetPixel(x-3, y-3, 0, 54, 54)
+            #matrix.SetPixel(x-3, y-3, 0, 54, 54)
             matrix.SetPixel(x-3, y, 0, 54, 54)
-            matrix.SetPixel(x-3, y+3, 0, 54, 54)
+            #matrix.SetPixel(x-3, y+3, 0, 54, 54)
 
         elif i == 7:
             #Center pixel
