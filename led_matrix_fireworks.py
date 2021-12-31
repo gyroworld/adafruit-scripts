@@ -24,7 +24,7 @@ offscreen_canvas = matrix.CreateFrameCanvas()
 #blue green firework
 while True:
     for i in range(8):
-        offscreen_canvas.Clear()
+        #offscreen_canvas.Clear()
         if i == 0:
             #Center pixel
             matrix.SetPixel(x, y, 255, 255, 255)
@@ -251,7 +251,7 @@ while True:
             matrix.SetPixel(x-3, y, 0, 0, 0)
             matrix.SetPixel(x-3, y+3, 0, 0, 0)
 
-        offscreen_canvas = matrix.SwapOnVSync(offscreen_canvas)
+        #offscreen_canvas = matrix.SwapOnVSync(offscreen_canvas)
         sleep(1)
 
     else:
