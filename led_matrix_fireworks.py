@@ -1,9 +1,11 @@
 #!/usr/bin/python
 
+from os import read
 from rgbmatrix import RGBMatrix, RGBMatrixOptions, graphics
 from time import sleep
 from datetime import datetime
 import sys
+import random
 
 x = int(sys.argv[1])
 y = int(sys.argv[2])
@@ -32,8 +34,36 @@ options.disable_hardware_pulsing = True
 matrix = RGBMatrix(options=options)
 offscreen_canvas = matrix.CreateFrameCanvas()
 
+#Colors
+purple = list([127, 0, 255], [102, 0, 204], [76, 0, 153])
+blue = list([0, 0, 255], [0, 0, 204], [0, 0, 153])
+green = list([0, 255, 0], [0, 204, 0], [0, 153, 0])
+magenta = list([255, 0, 255], [204, 102, 204], [153, 0, 153])
+orange = list([255, 128, 0], [204, 102, 0], [153, 76, 0])
+red = list([255, 0, 0], [204, 0, 0], [153, 0, 0])
+yellow = list([255, 255, 0], [204, 204, 0], [153, 0, 153])
+
+colors = list(purple, blue, green, magenta, orange, red, yellow)
+
 #blue green firework
-while True:
+def drawFirework():
+    x = random.randrange(4, 28)
+    y = random.randrange(4, 28)
+
+    color = random.choice(colors)
+
+    c1r = color[0][0]
+    c1g = color[0][1]
+    c1b = color[0][2]
+
+    c2r = color[1][0]
+    c2g = color[1][1]
+    c2b = color[1][2]
+
+    c3r = color[2][0]
+    c3g = color[2][1]
+    c3b = color[2][2]
+
     for i in range(8):
         #offscreen_canvas.Clear()
         if i == 0:
