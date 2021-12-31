@@ -115,11 +115,11 @@ def happyNewYearStatic():
 
 def happyNewYearFlashing():
     global offscreen_canvas
-    offscreen_canvas.Clear()
     inverted = False
     i = 120
 
     while i > 0:
+        offscreen_canvas.Clear()
         if not inverted:
             graphics.DrawText(matrix, font, 1, 8, white, "HAPPY")
             graphics.DrawText(matrix, font, 7, 16, white, "NEW")
@@ -196,9 +196,8 @@ def minuteCountdown():
     while True:
         offscreen_canvas.Clear()
         time = timeLeft()
-
+        
         if time[2] == 0:
-            offscreen_canvas.Clear()
             break
 
         graphics.DrawText(offscreen_canvas, font_large, 1, 26, white, str('{:0>2}'.format(time[2])))
