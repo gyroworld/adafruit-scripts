@@ -64,7 +64,7 @@ def test2():
         
         x -= 1
 
-        if (x == -40):
+        if (x == -54):
             x = 32
 
         sleep(1)
