@@ -23,6 +23,9 @@ font = graphics.Font()
 #font.LoadFont("/home/pi/rpi-rgb-led-matrix/fonts/4x6.bdf")
 font.LoadFont("/home/pi/rpi-rgb-led-matrix/fonts/6x10.bdf")
 
+font_small = graphics.Font()
+font_small.LoadFont("/home/pi/rpi-rgb-led-matrix/fonts/4x6.bdf")
+
 #Set colors
 purple = graphics.Color(255, 0, 255)
 red = graphics.Color(255, 0, 0)
@@ -44,21 +47,22 @@ def test1():
     #DrawText(core.Canvas c, Font f, int x, int y, Color color, text):
     print("Running Test1.")
     graphics.DrawText(matrix, font, 9, 6, green, "NYE")
-    graphics.DrawText(matrix, font, 6, 14, red, "2022")
+    graphics.DrawText(matrix, font, 6, 14, red, "2021")
     sleep(30)
     print("Test1 complete.")
 
 def test2():
-    print("Running test2.")
-    i = 0
     global offscreen_canvas
-    while i < 10:
+    while True:
+        time = timeLeft()
         offscreen_canvas.Clear()
-        graphics.DrawText(offscreen_canvas, font, 0, 10, red, "Test2")
-        sleep(0.5)
+        graphics.DrawText(matrix, font, 9, 8, green, "NYE")
+        graphics.DrawText(matrix, font, 6, 16, red, "2021")
+        graphics.DrawText(matrix, font_small, 0, 24, purple, "Countdown")
+        graphics.DrawText(matrix, font, 6, 16, blue, str(time[0], ':', time[1]))
+        sleep(1)
         offscreen_canvas = matrix.SwapOnVSync(offscreen_canvas)
-        i += 1
-    print("Test2 complete.")
+
 
 def fontTest():
     print(font)
@@ -126,4 +130,4 @@ def happyNewYearScroll2():
         sleep(0.05)
         offscreen_canvas = matrix.SwapOnVSync(offscreen_canvas)
 
-happyNewYearScroll2()
+test2()
