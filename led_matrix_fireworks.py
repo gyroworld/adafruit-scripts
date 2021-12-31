@@ -89,9 +89,9 @@ while True:
             matrix.SetPixel(x+3, y, 255, 255, 255)
             matrix.SetPixel(x+3, y-3, 255, 255, 255)
             matrix.SetPixel(x, y-3, 255, 255, 255)
-            matrix.SetPixel(x-3, y-2, 255, 255, 255)
+            matrix.SetPixel(x-3, y-3, 255, 255, 255)
             matrix.SetPixel(x-3, y, 255, 255, 255)
-            matrix.SetPixel(x-3, y+2, 255, 255, 255)
+            matrix.SetPixel(x-3, y+3, 255, 255, 255)
 
         elif i == 4:
             matrix.SetPixel(x, y, 0, 0, 0)
@@ -119,9 +119,9 @@ while True:
             matrix.SetPixel(x+3, y, 0, 255, 255)
             matrix.SetPixel(x+3, y-3, 0, 255, 255)
             matrix.SetPixel(x, y-3, 0, 255, 255)
-            matrix.SetPixel(x-3, y-2, 0, 255, 255)
+            matrix.SetPixel(x-3, y-3, 0, 255, 255)
             matrix.SetPixel(x-3, y, 0, 255, 255)
-            matrix.SetPixel(x-3, y+2, 0, 255, 255)
+            matrix.SetPixel(x-3, y+3, 0, 255, 255)
         
         elif i == 5:
             matrix.SetPixel(x, y, 0, 0, 0)
@@ -149,9 +149,9 @@ while True:
             matrix.SetPixel(x+3, y, 0, 204, 204)
             matrix.SetPixel(x+3, y-3, 0, 204, 204)
             matrix.SetPixel(x, y-3, 0, 204, 204)
-            matrix.SetPixel(x-3, y-2, 0, 204, 204)
+            matrix.SetPixel(x-3, y-3, 0, 204, 204)
             matrix.SetPixel(x-3, y, 0, 204, 204)
-            matrix.SetPixel(x-3, y+2, 0, 204, 204)
+            matrix.SetPixel(x-3, y+3, 0, 204, 204)
 
         elif i == 6:
             matrix.SetPixel(x, y, 0, 0, 0)
@@ -179,9 +179,9 @@ while True:
             matrix.SetPixel(x+3, y, 0, 153, 153)
             matrix.SetPixel(x+3, y-3, 0, 153, 153)
             matrix.SetPixel(x, y-3, 0, 153, 153)
-            matrix.SetPixel(x-3, y-2, 0, 153, 153)
+            matrix.SetPixel(x-3, y-3, 0, 153, 153)
             matrix.SetPixel(x-3, y, 0, 153, 153)
-            matrix.SetPixel(x-3, y+2, 0, 153, 153)
+            matrix.SetPixel(x-3, y+3, 0, 153, 153)
 
         elif i == 7:
             matrix.SetPixel(x, y, 0, 0, 0)
@@ -209,9 +209,9 @@ while True:
             matrix.SetPixel(x+3, y, 0, 0, 0)
             matrix.SetPixel(x+3, y-3, 0, 0, 0)
             matrix.SetPixel(x, y-3, 0, 0, 0)
-            matrix.SetPixel(x-3, y-2, 0, 0, 0)
+            matrix.SetPixel(x-3, y-3, 0, 0, 0)
             matrix.SetPixel(x-3, y, 0, 0, 0)
-            matrix.SetPixel(x-3, y+2, 0, 0, 0)
+            matrix.SetPixel(x-3, y+3, 0, 0, 0)
 
         offscreen_canvas = matrix.SwapOnVSync(offscreen_canvas)
         sleep(0.1)
