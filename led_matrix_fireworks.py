@@ -7,21 +7,18 @@ import sys
 
 x = int(sys.argv[1])
 y = int(sys.argv[2])
-color1 = sys.argv[3]
-color2 = sys.argv[4]
-color3 = sys.argv[5]
 
-c1r = int(color1[0])
-c1g = int(color1[1])
-c1b = int(color1[2])
+c1r = int(sys.argv[3])
+c1g = int(sys.argv[4])
+c1b = int(sys.argv[5])
 
-c2r = int(color2[0])
-c2g = int(color2[1])
-c2b = int(color2[2])
+c2r = int(sys.argv[6])
+c2g = int(sys.argv[7])
+c2b = int(sys.argv[8])
 
-c3r = int(color3[0])
-c3g = int(color3[1])
-c3b = int(color3[2])
+c3r = int(sys.argv[9])
+c3g = int(sys.argv[10])
+c3b = int(sys.argv[11])
 
 # Set matrix options
 options = RGBMatrixOptions()
