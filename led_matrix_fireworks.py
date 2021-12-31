@@ -23,7 +23,7 @@ offscreen_canvas = matrix.CreateFrameCanvas()
 
 #blue green firework
 while True:
-    for i in range(0, 4):
+    for i in range(8):
         offscreen_canvas.Clear()
         if i == 0:
             matrix.SetPixel(x, y, 255, 255, 255)
