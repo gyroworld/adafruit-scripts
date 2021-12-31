@@ -24,7 +24,7 @@ font = graphics.Font()
 font.LoadFont("/home/pi/rpi-rgb-led-matrix/fonts/6x10.bdf")
 
 font_small = graphics.Font()
-font_small.LoadFont("/home/pi/rpi-rgb-led-matrix/fonts/6x9.bdf")
+font_small.LoadFont("/home/pi/rpi-rgb-led-matrix/fonts/5x8.bdf")
 
 #Set colors
 purple = graphics.Color(255, 0, 255)
@@ -63,9 +63,9 @@ def test2():
         graphics.DrawText(matrix, font, 9, 8, green, "NYE")
         graphics.DrawText(matrix, font, 6, 16, red, "2021")
         graphics.DrawText(matrix, font, x, 24, purple, "Countdown")
-        graphics.DrawText(matrix, font_small, 0, 32, light_blue, str(time[0]))
-        graphics.DrawText(matrix, font_small, 11, 32, light_blue, str(time[1]))
-        graphics.DrawText(matrix, font_small, 22, 32, light_blue, str(time[2]))
+        graphics.DrawText(matrix, font_small, 0, 31, light_blue, str(time[0]))
+        graphics.DrawText(matrix, font_small, 11, 31, light_blue, str(time[1]))
+        graphics.DrawText(matrix, font_small, 22, 31, light_blue, str(time[2]))
 
         matrix.SetPixel(10, 26, 255, 255, 255)
         matrix.SetPixel(10, 27, 255, 255, 255)
