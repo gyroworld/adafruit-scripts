@@ -75,7 +75,7 @@ def test2():
 
 
 def fontTest(char):
-    print('Character :' + char)
+    print('Character :' + str(char))
     print(font.CharacterWidth(char))
     print(font.height)
     print(font.baseline)
@@ -141,4 +141,4 @@ def happyNewYearScroll2():
         offscreen_canvas = matrix.SwapOnVSync(offscreen_canvas)
 
 for x in range(0,10):
-    fontTest(x)
+    fontTest(str(x))
