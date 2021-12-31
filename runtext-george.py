@@ -40,7 +40,7 @@ black = graphics.Color(0, 0, 0)
 
 def timeLeft():
     #jan012022 = datetime(2022, 1, 1, 0, 0, 0, 0)
-    jan012022 = datetime(2021, 12, 31, 10, 42, 0, 0)
+    jan012022 = datetime(2021, 12, 31, 10, 47, 0, 0)
     now = datetime.now()
     diff = jan012022 - now
     hours = int(diff.seconds/3600)
@@ -125,12 +125,14 @@ def happyNewYearFlashing():
             graphics.DrawText(matrix, font, 7, 16, white, "NEW")
             graphics.DrawText(matrix, font, 4, 24, white, "YEAR")
             graphics.DrawText(matrix, font, 4, 32, white, "2022")
+            inverted = True
         else:
             matrix.Fill(255, 255, 255)
             graphics.DrawText(matrix, font, 1, 8, black, "HAPPY")
             graphics.DrawText(matrix, font, 7, 16, black, "NEW")
             graphics.DrawText(matrix, font, 4, 24, black, "YEAR")
             graphics.DrawText(matrix, font, 4, 32, black, "2022")
+            inverted = False
         sleep(0.5)
         i -= 1
         offscreen_canvas = matrix.SwapOnVSync(offscreen_canvas)
@@ -198,7 +200,7 @@ def minuteCountdown():
         if time[2] == 0:
             break
 
-        graphics.DrawText(offscreen_canvas, font, 1, 26, white, str('{:0>2}'.format(time[2])))
+        graphics.DrawText(offscreen_canvas, font_large, 1, 26, white, str('{:0>2}'.format(time[2])))
         offscreen_canvas = matrix.SwapOnVSync(offscreen_canvas)
         sleep(.1)
 
