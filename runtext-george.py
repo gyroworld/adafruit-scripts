@@ -24,7 +24,7 @@ font = graphics.Font()
 font.LoadFont("/home/pi/rpi-rgb-led-matrix/fonts/6x10.bdf")
 
 font_small = graphics.Font()
-font_small.LoadFont("/home/pi/rpi-rgb-led-matrix/fonts/5x8.bdf")
+font_small.LoadFont("/home/pi/rpi-rgb-led-matrix/fonts/5x7.bdf")
 
 #Set colors
 purple = graphics.Color(255, 0, 255)
