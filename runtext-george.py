@@ -40,12 +40,12 @@ black = graphics.Color(0, 0, 0)
 
 def timeLeft():
     #jan012022 = datetime(2022, 1, 1, 0, 0, 0, 0)
-    jan012022 = datetime(2021, 12, 31, 10, 35, 0, 0)
+    jan012022 = datetime(2021, 12, 31, 10, 42, 0, 0)
     now = datetime.now()
     diff = jan012022 - now
-    hours = str(int(diff.seconds/3600))
-    minutes = str(int((diff.seconds % 3600)/60))
-    seconds = str(diff.seconds % 60)
+    hours = int(diff.seconds/3600)
+    minutes = int((diff.seconds % 3600)/60)
+    seconds = diff.seconds % 60
     return [hours, minutes, seconds]
 
 
@@ -72,9 +72,9 @@ def mainCountdownClock():
         graphics.DrawText(matrix, font, 8, 8, green, "NYE")
         graphics.DrawText(matrix, font, 5, 16, red, "2021")
         graphics.DrawText(matrix, font, x, 24, purple, "Countdown")
-        graphics.DrawText(matrix, font_small, -1, 31, light_blue, str('{:0>2}'.format(time[0])))
+        graphics.DrawText(matrix, font_small, -1, 31, light_blue, str(time[0]))
         graphics.DrawText(matrix, font_small, 11, 31, light_blue, str('{:0>2}'.format(time[1])))
-        graphics.DrawText(matrix, font_small, 22, 31, light_blue, str('{:0>2}'.format(time[2])))
+        graphics.DrawText(matrix, font_small, 23, 31, light_blue, str('{:0>2}'.format(time[2])))
 
         #matrix.SetPixel(10, 26, 255, 255, 255)
         matrix.SetPixel(9, 27, 255, 255, 255)
