@@ -40,7 +40,7 @@ black = graphics.Color(0, 0, 0)
 
 def timeLeft():
     #jan012022 = datetime(2022, 1, 1, 0, 0, 0, 0)
-    jan012022 = datetime(2021, 12, 31, 10, 57, 0, 0)
+    jan012022 = datetime(2021, 12, 31, 11, 14, 0, 0)
     now = datetime.now()
     diff = jan012022 - now
     hours = int(diff.seconds/3600)
@@ -207,9 +207,9 @@ def minuteCountdown():
 
 
 def main():
-    #mainCountdownClock()
+    mainCountdownClock()
     minuteCountdown()
     happyNewYearFlashing()
-    #happyNewYearScroll2()
+    happyNewYearScroll2()
 
 main()
