@@ -206,9 +206,9 @@ def minuteCountdown():
 
 
 def main():
-    mainCountdownClock()
+    #mainCountdownClock()
     minuteCountdown()
     happyNewYearFlashing()
-    happyNewYearScroll2()
+    #happyNewYearScroll2()
 
 main()
