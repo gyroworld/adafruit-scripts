@@ -198,6 +198,7 @@ def minuteCountdown():
         time = timeLeft()
         
         if time[2] == 0:
+            offscreen_canvas = matrix.SwapOnVSync(offscreen_canvas)
             break
 
         graphics.DrawText(offscreen_canvas, font_large, 1, 26, white, str('{:0>2}'.format(time[2])))
