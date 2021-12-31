@@ -253,8 +253,8 @@ while True:
 
         offscreen_canvas = matrix.SwapOnVSync(offscreen_canvas)
         sleep(0.1)
-        
+
     else:
-        offscreen_canvas.Clear()
-        offscreen_canvas = matrix.SwapOnVSync(offscreen_canvas)
+        #offscreen_canvas.Clear()
+        #offscreen_canvas = matrix.SwapOnVSync(offscreen_canvas)
         sleep(2)
