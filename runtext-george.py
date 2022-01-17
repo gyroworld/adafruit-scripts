@@ -49,15 +49,6 @@ def timeLeft():
     return [hours, minutes, seconds]
 
 
-def test1():
-    # DrawText(core.Canvas c, Font f, int x, int y, Color color, text):
-    print("Running Test1.")
-    graphics.DrawText(matrix, font, 0, 6, green, "Looks")
-    graphics.DrawText(matrix, font, 0, 14, red, "Good!")
-    sleep(30)
-    print("Test1 complete.")
-
-
 def mainCountdownClock():
     global offscreen_canvas
     x = 32
@@ -76,15 +67,13 @@ def mainCountdownClock():
         graphics.DrawText(matrix, font_small, 11, 31, light_blue, str('{:0>2}'.format(time[1])))
         graphics.DrawText(matrix, font_small, 23, 31, light_blue, str('{:0>2}'.format(time[2])))
 
-        #matrix.SetPixel(10, 26, 255, 255, 255)
+        #Draw colon
         matrix.SetPixel(9, 27, 255, 255, 255)
         matrix.SetPixel(9, 28, 255, 255, 255)
-        #matrix.SetPixel(10, 30, 255, 255, 255)
 
-        #matrix.SetPixel(21, 26, 255, 255, 255)
+        #Draw colon
         matrix.SetPixel(21, 27, 255, 255, 255)
         matrix.SetPixel(21, 28, 255, 255, 255)
-        #matrix.SetPixel(21, 30, 255, 255, 255)
 
         x -= 1
 
