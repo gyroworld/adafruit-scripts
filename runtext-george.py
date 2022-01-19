@@ -39,7 +39,7 @@ black = graphics.Color(0, 0, 0)
 
 
 def timeLeft():
-    jan012022 = datetime(2022, 1, 1, 0, 0, 0, 0)
+    jan012022 = datetime(2023, 1, 1, 0, 0, 0, 0)
     #jan012022 = datetime(2021, 12, 31, 11, 14, 0, 0)
     now = datetime.now()
     diff = jan012022 - now
