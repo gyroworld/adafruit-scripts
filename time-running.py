@@ -24,6 +24,9 @@ font.LoadFont("/home/pi/rpi-rgb-led-matrix/fonts/6x10.bdf")
 font_small = graphics.Font()
 font_small.LoadFont("/home/pi/rpi-rgb-led-matrix/fonts/5x8.bdf")
 
+font_smallest = graphics.Font()
+font_smallest.LoadFont("/home/pi/rpi-rgb-led-matrix/fonts/5x7.bdf")
+
 font_large = graphics.Font()
 font_large.LoadFont("/home/pi/rpi-rgb-led-matrix/fonts/texgyre-27.bdf")
 
@@ -55,19 +58,19 @@ def timerDisplay():
         offscreen_canvas.Clear()
         time = timeRunning()
 
-        graphics.DrawText(matrix, font_small, 0, 8, green, "TIME")
-        graphics.DrawText(matrix, font_small, 0, 20, red, "RUNNING")
+        graphics.DrawText(matrix, font_smallest, 0, 8, green, "TIME")
+        graphics.DrawText(matrix, font_smallest, 0, 20, red, "RUNNING")
         graphics.DrawText(matrix, font_small, -1, 28,light_blue, str('{:0>2}'.format(time[0])))
         graphics.DrawText(matrix, font_small, 11, 28,light_blue, str('{:0>2}'.format(time[1])))
         graphics.DrawText(matrix, font_small, 23, 28,light_blue, str('{:0>2}'.format(time[2])))
 
         # Draw colon
-        matrix.SetPixel(9, 27, 255, 255, 255)
-        matrix.SetPixel(9, 28, 255, 255, 255)
+        matrix.SetPixel(9, 24, 255, 255, 255)
+        matrix.SetPixel(9, 25, 255, 255, 255)
 
         # Draw colon
-        matrix.SetPixel(21, 27, 255, 255, 255)
-        matrix.SetPixel(21, 28, 255, 255, 255)
+        matrix.SetPixel(21, 24, 255, 255, 255)
+        matrix.SetPixel(21, 25, 255, 255, 255)
 
         sleep(1)
 
