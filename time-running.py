@@ -11,7 +11,7 @@ options.rows = 32
 options.chain_length = 1
 options.parallel = 1
 options.hardware_mapping = 'adafruit-hat'
-options.led-slowdown-gpio = 0
+options.led_slowdown_gpio = 0
 options.disable_hardware_pulsing = False
 
 # Create matrix and offscreen canvas
