@@ -25,7 +25,7 @@ font_small = graphics.Font()
 font_small.LoadFont("/home/pi/rpi-rgb-led-matrix/fonts/5x8.bdf")
 
 font_smallest = graphics.Font()
-font_smallest.LoadFont("/home/pi/rpi-rgb-led-matrix/fonts/5x7.bdf")
+font_smallest.LoadFont("/home/pi/rpi-rgb-led-matrix/fonts/4x6.bdf")
 
 font_large = graphics.Font()
 font_large.LoadFont("/home/pi/rpi-rgb-led-matrix/fonts/texgyre-27.bdf")
