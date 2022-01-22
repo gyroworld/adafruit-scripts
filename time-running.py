@@ -39,6 +39,7 @@ black = graphics.Color(0, 0, 0)
 
 startTime = datetime.now()
 
+
 def timeRunning():
     diff = startTime - datetime.now()
     hours = int(diff.seconds/3600)
@@ -47,7 +48,7 @@ def timeRunning():
     return [hours, minutes, seconds]
 
 
-def mainCountdownClock():
+def timerDisplay():
     global offscreen_canvas
 
     while True:
@@ -56,18 +57,21 @@ def mainCountdownClock():
 
         graphics.DrawText(matrix, font, 0, 8, green, "TIME")
         graphics.DrawText(matrix, font, 0, 16, red, "RUNNING")
-        graphics.DrawText(matrix, font_small, -1, 31, light_blue, str('{:0>2}'.format(time[0])))
-        graphics.DrawText(matrix, font_small, 11, 31, light_blue, str('{:0>2}'.format(time[1])))
-        graphics.DrawText(matrix, font_small, 23, 31, light_blue, str('{:0>2}'.format(time[2])))
+        graphics.DrawText(matrix, font_small, -1, 31,light_blue, str('{:0>2}'.format(time[0])))
+        graphics.DrawText(matrix, font_small, 11, 31,light_blue, str('{:0>2}'.format(time[1])))
+        graphics.DrawText(matrix, font_small, 23, 31,light_blue, str('{:0>2}'.format(time[2])))
 
-        #Draw colon
+        # Draw colon
         matrix.SetPixel(9, 27, 255, 255, 255)
         matrix.SetPixel(9, 28, 255, 255, 255)
 
-        #Draw colon
+        # Draw colon
         matrix.SetPixel(21, 27, 255, 255, 255)
         matrix.SetPixel(21, 28, 255, 255, 255)
 
         sleep(1)
 
         offscreen_canvas = matrix.SwapOnVSync(offscreen_canvas)
+
+
+timerDisplay()
