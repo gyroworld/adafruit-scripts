@@ -41,7 +41,7 @@ startTime = datetime.now()
 
 
 def timeRunning():
-    diff = startTime - datetime.now()
+    diff = datetime.now() - startTime
     hours = int(diff.seconds/3600)
     minutes = int((diff.seconds % 3600)/60)
     seconds = diff.seconds % 60
@@ -55,11 +55,11 @@ def timerDisplay():
         offscreen_canvas.Clear()
         time = timeRunning()
 
-        graphics.DrawText(matrix, font, 0, 8, green, "TIME")
-        graphics.DrawText(matrix, font, 0, 16, red, "RUNNING")
-        graphics.DrawText(matrix, font_small, -1, 31,light_blue, str('{:0>2}'.format(time[0])))
-        graphics.DrawText(matrix, font_small, 11, 31,light_blue, str('{:0>2}'.format(time[1])))
-        graphics.DrawText(matrix, font_small, 23, 31,light_blue, str('{:0>2}'.format(time[2])))
+        graphics.DrawText(matrix, font_small, 0, 8, green, "TIME")
+        graphics.DrawText(matrix, font_small, 0, 20, red, "RUNNING")
+        graphics.DrawText(matrix, font_small, -1, 28,light_blue, str('{:0>2}'.format(time[0])))
+        graphics.DrawText(matrix, font_small, 11, 28,light_blue, str('{:0>2}'.format(time[1])))
+        graphics.DrawText(matrix, font_small, 23, 28,light_blue, str('{:0>2}'.format(time[2])))
 
         # Draw colon
         matrix.SetPixel(9, 27, 255, 255, 255)
