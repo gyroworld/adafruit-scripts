@@ -60,22 +60,22 @@ def timerDisplay():
         offscreen_canvas.Clear()
         #time = timeRunning()
 
-        graphics.DrawText(matrix, font_smallest, 8, 8, orange, "TIME")
-        graphics.DrawText(matrix, font_smallest, 2, 17, purple, "RUNNING")
+        graphics.DrawText(offscreen_canvas, font_smallest, 8, 8, orange, "TIME")
+        graphics.DrawText(offscreen_canvas, font_smallest, 2, 17, purple, "RUNNING")
         #graphics.DrawText(matrix, font_small, -1, 28,light_blue, str('{:0>2}'.format(time[0])))
         #graphics.DrawText(matrix, font_small, 11, 28,light_blue, str('{:0>2}'.format(time[1])))
         #graphics.DrawText(matrix, font_small, 23, 28,light_blue, str('{:0>2}'.format(time[2])))
-        graphics.DrawText(matrix, font_small, -1, 28,light_blue, str("01"))
-        graphics.DrawText(matrix, font_small, 11, 28,light_blue, str("02"))
-        graphics.DrawText(matrix, font_small, 23, 28,light_blue, str("03"))
+        graphics.DrawText(offscreen_canvas, font_small, -1, 28,light_blue, str("01"))
+        graphics.DrawText(offscreen_canvas, font_small, 11, 28,light_blue, str("02"))
+        graphics.DrawText(offscreen_canvas, font_small, 23, 28,light_blue, str("03"))
 
         # Draw colon
-        matrix.SetPixel(9, 24, 255, 255, 255)
-        matrix.SetPixel(9, 25, 255, 255, 255)
+        offscreen_canvas.SetPixel(9, 24, 255, 255, 255)
+        offscreen_canvas.SetPixel(9, 25, 255, 255, 255)
 
         # Draw colon
-        matrix.SetPixel(21, 24, 255, 255, 255)
-        matrix.SetPixel(21, 25, 255, 255, 255)
+        offscreen_canvas.SetPixel(21, 24, 255, 255, 255)
+        offscreen_canvas.SetPixel(21, 25, 255, 255, 255)
 
         sleep(0.05)
 
