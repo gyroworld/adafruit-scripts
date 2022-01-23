@@ -74,7 +74,7 @@ def timerDisplay():
         matrix.SetPixel(21, 24, 255, 255, 255)
         matrix.SetPixel(21, 25, 255, 255, 255)
 
-        sleep(0.1)
+        sleep(0.05)
 
         offscreen_canvas = matrix.SwapOnVSync(offscreen_canvas)
 
