@@ -110,17 +110,17 @@ def happyNewYearFlashing():
     while i > 0:
         offscreen_canvas.Clear()
         if not inverted:
-            graphics.DrawText(matrix, font, 1, 8, white, "HAPPY")
-            graphics.DrawText(matrix, font, 7, 16, white, "NEW")
-            graphics.DrawText(matrix, font, 4, 24, white, "YEAR")
-            graphics.DrawText(matrix, font, 4, 32, white, "2022")
+            graphics.DrawText(offscreen_canvas, font, 1, 8, white, "HAPPY")
+            graphics.DrawText(offscreen_canvas, font, 7, 16, white, "NEW")
+            graphics.DrawText(offscreen_canvas, font, 4, 24, white, "YEAR")
+            graphics.DrawText(offscreen_canvas, font, 4, 32, white, "2022")
             inverted = True
         else:
-            matrix.Fill(255, 255, 255)
-            graphics.DrawText(matrix, font, 1, 8, black, "HAPPY")
-            graphics.DrawText(matrix, font, 7, 16, black, "NEW")
-            graphics.DrawText(matrix, font, 4, 24, black, "YEAR")
-            graphics.DrawText(matrix, font, 4, 32, black, "2022")
+            offscreen_canvas.Fill(255, 255, 255)
+            graphics.DrawText(offscreen_canvas, font, 1, 8, black, "HAPPY")
+            graphics.DrawText(offscreen_canvas, font, 7, 16, black, "NEW")
+            graphics.DrawText(offscreen_canvas, font, 4, 24, black, "YEAR")
+            graphics.DrawText(offscreen_canvas, font, 4, 32, black, "2022")
             inverted = False
         sleep(0.5)
         i -= 1
@@ -133,10 +133,10 @@ def happyNewYearScroll():
 
     while True:
         offscreen_canvas.Clear()
-        graphics.DrawText(matrix, font, x, 8, green, "HAPPY")
-        graphics.DrawText(matrix, font, x+15, 16, red, "NEW")
-        graphics.DrawText(matrix, font, x+24, 24, purple, "YEAR")
-        graphics.DrawText(matrix, font, x+36, 32, blue, "2022")
+        graphics.DrawText(offscreen_canvas, font, x, 8, green, "HAPPY")
+        graphics.DrawText(offscreen_canvas, font, x+15, 16, red, "NEW")
+        graphics.DrawText(offscreen_canvas, font, x+24, 24, purple, "YEAR")
+        graphics.DrawText(offscreen_canvas, font, x+36, 32, blue, "2022")
 
         x -= 1
 
