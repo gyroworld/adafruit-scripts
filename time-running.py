@@ -58,16 +58,13 @@ def timerDisplay():
 
     while True:
         offscreen_canvas.Clear()
-        #time = timeRunning()
+        time = timeRunning()
 
         graphics.DrawText(offscreen_canvas, font_smallest, 8, 8, orange, "TIME")
         graphics.DrawText(offscreen_canvas, font_smallest, 2, 17, purple, "RUNNING")
-        #graphics.DrawText(matrix, font_small, -1, 28,light_blue, str('{:0>2}'.format(time[0])))
-        #graphics.DrawText(matrix, font_small, 11, 28,light_blue, str('{:0>2}'.format(time[1])))
-        #graphics.DrawText(matrix, font_small, 23, 28,light_blue, str('{:0>2}'.format(time[2])))
-        graphics.DrawText(offscreen_canvas, font_small, -1, 28,light_blue, str("01"))
-        graphics.DrawText(offscreen_canvas, font_small, 11, 28,light_blue, str("02"))
-        graphics.DrawText(offscreen_canvas, font_small, 23, 28,light_blue, str("03"))
+        graphics.DrawText(offscreen_canvas, font_small, -1, 28,light_blue, str('{:0>2}'.format(time[0])))
+        graphics.DrawText(offscreen_canvas, font_small, 11, 28,light_blue, str('{:0>2}'.format(time[1])))
+        graphics.DrawText(offscreen_canvas, font_small, 23, 28,light_blue, str('{:0>2}'.format(time[2])))
 
         # Draw colon
         offscreen_canvas.SetPixel(9, 24, 255, 255, 255)
