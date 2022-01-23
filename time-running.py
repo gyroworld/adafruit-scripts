@@ -12,7 +12,7 @@ options.chain_length = 1
 options.parallel = 1
 options.hardware_mapping = 'adafruit-hat'
 options.show_refresh_rate = True
-options.limit_refresh_rate_hz = 120
+#options.limit_refresh_rate_hz = 120
 options.disable_hardware_pulsing = False
 
 # Create matrix and offscreen canvas
@@ -74,7 +74,7 @@ def timerDisplay():
         matrix.SetPixel(21, 24, 255, 255, 255)
         matrix.SetPixel(21, 25, 255, 255, 255)
 
-        sleep(1)
+        sleep(0.1)
 
         offscreen_canvas = matrix.SwapOnVSync(offscreen_canvas)
 
