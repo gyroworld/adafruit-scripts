@@ -60,20 +60,20 @@ def mainCountdownClock():
         if time[0] == 0 and time[1] == 0:
             break
 
-        graphics.DrawText(matrix, font, 8, 8, green, "NYE")
-        graphics.DrawText(matrix, font, 5, 16, red, "2021")
-        graphics.DrawText(matrix, font, x, 24, purple, "Countdown")
-        graphics.DrawText(matrix, font_small, -1, 31, light_blue, str('{:0>2}'.format(time[0])))
-        graphics.DrawText(matrix, font_small, 11, 31, light_blue, str('{:0>2}'.format(time[1])))
-        graphics.DrawText(matrix, font_small, 23, 31, light_blue, str('{:0>2}'.format(time[2])))
+        graphics.DrawText(offscreen_canvas, font, 8, 8, green, "NYE")
+        graphics.DrawText(offscreen_canvas, font, 5, 16, red, "2021")
+        graphics.DrawText(offscreen_canvas, font, x, 24, purple, "Countdown")
+        graphics.DrawText(offscreen_canvas, font_small, -1, 31, light_blue, str('{:0>2}'.format(time[0])))
+        graphics.DrawText(offscreen_canvas, font_small, 11, 31, light_blue, str('{:0>2}'.format(time[1])))
+        graphics.DrawText(offscreen_canvas, font_small, 23, 31, light_blue, str('{:0>2}'.format(time[2])))
 
         #Draw colon
-        matrix.SetPixel(9, 27, 255, 255, 255)
-        matrix.SetPixel(9, 28, 255, 255, 255)
+        offscreen_canvas.SetPixel(9, 27, 255, 255, 255)
+        offscreen_canvas.SetPixel(9, 28, 255, 255, 255)
 
         #Draw colon
-        matrix.SetPixel(21, 27, 255, 255, 255)
-        matrix.SetPixel(21, 28, 255, 255, 255)
+        offscreen_canvas.SetPixel(21, 27, 255, 255, 255)
+        offscreen_canvas.SetPixel(21, 28, 255, 255, 255)
 
         x -= 1
 
